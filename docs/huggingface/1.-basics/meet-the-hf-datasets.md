@@ -8,6 +8,23 @@
 
 </details>
 
+### Topics
+
+| Data: the start of it all                       |
+| ----------------------------------------------- |
+| Sneak peak at datasets                          |
+| Getting started with the datasets library       |
+| Datasets 🤝 Arrow                               |
+| Most common datasets for tasks                  |
+| Exploring dataset structures                    |
+| Dataset splits and formats                      |
+| Data filtering and processing                   |
+| Advanced data manipulations                     |
+| Batching and iterating                          |
+| Loading custom datasets                         |
+| Streaming datasets                              |
+| Questions to ask before starting with a dataset |
+
 ### Sneak peak at datasets
 
 

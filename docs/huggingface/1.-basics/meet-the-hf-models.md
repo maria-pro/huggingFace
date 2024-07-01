@@ -20,15 +20,15 @@
 
 ### HF Hub
 
-Welcome! Let's have a look at Hugging Face hub and think about a small project we can do for our portfolio.
+Welcome! Let's have a look at Hugging Face hub and think about a small project  - as you know the coding and builidng your portfolio are the most important things for your career.
 
-We looked briefly at the Hugging Face website and created an account there. Now, let’s head to Hugging Face hub and a look at all the treasures that are hidden there! And there is a LOT - Hugging Face is one of the best ML platforms that has everything in one place - from data to models and tools to use them on the go.&#x20;
+We looked briefly at the Hugging Face website. Now, let’s head to Hugging Face hub and a look at all the treasures that are hidden there! And there is a LOT - Hugging Face is one of the best ML platforms that has everything in one place - from data to models and tools to use them on the go.&#x20;
 
 But let's start doing things!
 
-Hugging Face hub is build around three components:
+Hugging Face hub is build around four components:
 
-1\. Models! And there are a lot of them there!
+1\. Models
 
 2\. Datasets
 
@@ -37,15 +37,17 @@ Hugging Face hub is build around three components:
 4\. Spaces and community
 
 \
-Let's open the HF website - huggingface.co and explore.
-
-
+Let's open the HF website - huggingface.co and explore all those components
 
 ![](https://lh7-us.googleusercontent.com/docsz/AD\_4nXesuATu53PmwlYUFtvemIXgpr5YmUrfBAwpOEmwmFQwcGIdxvIg1-PZM49Fcbtn37V8EqmqCr-83N5DGacBBswckLqQbMs5F4tgO0ty8U1r0I\_ZTVTuTQg5Bg0V3BDWe5oqs77huhy1QIktPR\_wMQAhc6Vi?key=pwjwodfWMnUxIFMintqadw)
 
 #### Models
 
-Let's start with models! Hugging Face is the home for thousands of pre-trained models. These models are capable to solve very different tasks from language processing to vision, audio and a multimodal which is a combination of different modalities, such as text and visual in a particular context! But don’t stress we will look at those and play with them!
+Let's start with models!&#x20;
+
+Hugging Face is the home for thousands of pre-trained models. They are freely available there and this is what makes it so valuable.
+
+These models are capable to solve very different tasks from language processing to vision, audio and a multimodal which is a combination of different modalities, such as text and visual in a particular context! But don’t stress we will look at those and play with them!
 
 \
 
