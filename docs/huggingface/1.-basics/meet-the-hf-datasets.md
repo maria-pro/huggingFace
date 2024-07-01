@@ -50,6 +50,8 @@ I really like this library: it makes working with data simplifies how to access 
 
 ### Getting started with the datasets library
 
+Need: `https://huggingface.co/datasets/stanfordnlp/imdb`&#x20;
+
 Let's start our second Hugging Face project. In&#x20;
 
 {% hint style="info" %}
@@ -79,7 +81,79 @@ The size of the dataset is 50,000 reviews, which is manageable and comprehensive
 
 But let's go to Google Colab and start coding.
 
+We need to install the `datasets` library first and ensure that we have integration with \```huggingface_hub`,``
 
+```python
+!pip install datasets 
+!pip install huggingface_hub
+```
+
+We will use load\_dataset function to get our data straight from Hugging Face. There are also other ways to load data using this library, we will look at them later.
+
+```python
+from datasets import load_dataset 
+dataset=load_dataset("imdb")
+print(dataset)
+```
+
+`load_dataset` will download the dataset to your local computer
+
+We have training and testing splits in our data - which are subsets of data we can use for training and testing. So lets look at them
+
+```python
+train_dataset=dataset['train']
+test_dataset=dataset['test']
+train_dataset
+test_dataset
+```
+
+We also can load just a particular split that we are interested in using
+
+```
+train_dataset = load_dataset("imdb", split="train")
+```
+
+and by the way - if you are running this code locally and want to check where this dataset goes on your computer, we can check the cache location:
+
+```python
+from datasets import config
+
+print(config.HF_DATASETS_CACHE)
+```
+
+This will print the cache directory and we can go there. In our case we are using Google Colab so it shows:
+
+`/root/.cache/huggingface/datasets`
+
+Y_ou can use this to remove datasets that you do not need to free up some space later._
+
+Let's look at the structure of the train\_dataset.&#x20;
+
+```python
+train_dataset.column_names
+train_dataset.features
+```
+
+So when to use which of those attributes?&#x20;
+
+Notice that `column_names` returns a list of strings with where each string is the name of a column.&#x20;
+
+`features` returns a dictionary where the keys are the column names and the values describe the type and other properties of each column. &#x20;
+
+I usually use `column_names`to to quickly see the structure of the dataset or use column names in the code.
+
+Notice that we cannot use either of these attributes on the full dataset.
+
+```python
+dataset.column_names
+dataset.features
+```
+
+&#x20;This is because the dataset object itself can contain multiple splits, and each can have different structures. We will talk more about the dataset objects later.
+
+
+
+{% embed url="https://github.com/maria-pro/huggingFace/blob/main/test.ipynb" %}
 
 
 

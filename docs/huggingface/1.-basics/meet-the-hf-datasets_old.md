@@ -1,19 +1,8 @@
 # Meet the HF datasets\_old
 
-| Data: the start of it all                       |
-| ----------------------------------------------- |
-| Sneak peak at datasets                          |
-| Getting started with the datasets library       |
-| Datasets 🤝 Arrow                               |
-| Most common datasets for tasks                  |
-| Exploring dataset structures                    |
-| Dataset splits and formats                      |
-| Data filtering and processing                   |
-| Advanced data manipulations                     |
-| Batching and iterating                          |
-| Loading custom datasets                         |
-| Streaming datasets                              |
-| Questions to ask before starting with a dataset |
+
+
+<table><thead><tr><th>Title</th><th></th><th width="100" data-type="checkbox">Script</th><th width="68" data-type="checkbox">Video</th><th>Code<select><option value="DCzTXqSr4XA2" label="todo" color="blue"></option><option value="oDTc3pjDY2P5" label="done" color="blue"></option></select></th></tr></thead><tbody><tr><td>Data: the start of it all</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Sneak peak at datasets</td><td>HF hub<br>Dataset card<br>Copyrights and licences</td><td>false</td><td>false</td><td></td></tr><tr><td>Getting started with the datasets library</td><td>install datasets<br>load_dataset<br>locate entries<br>basic filtering</td><td>false</td><td>false</td><td><span data-option="DCzTXqSr4XA2">todo</span></td></tr><tr><td>Datasets 🤝 Arrow</td><td></td><td>false</td><td>false</td><td><span data-option="DCzTXqSr4XA2">todo</span></td></tr><tr><td>Most common datasets for tasks</td><td>tasks in data prepping</td><td>false</td><td>false</td><td></td></tr><tr><td>Exploring dataset structures</td><td>preview without loading </td><td>false</td><td>false</td><td><span data-option="DCzTXqSr4XA2">todo</span></td></tr><tr><td>Dataset splits and formats</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Data filtering and processing</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Advanced data manipulations</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Batching and iterating</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Loading custom datasets</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Streaming datasets</td><td></td><td>false</td><td>false</td><td></td></tr><tr><td>Questions to ask before starting with a dataset</td><td></td><td>false</td><td>false</td><td></td></tr></tbody></table>
 
 
 
