@@ -1,5 +1,13 @@
 # Meet the HF datasets
 
+<details>
+
+<summary>Content</summary>
+
+[outline-schedule.md](outline-schedule.md "mention")
+
+</details>
+
 ### Sneak peak at datasets
 
 
@@ -46,11 +54,9 @@ When I am not sure how to do something related to data at Hugging Face, I always
 
 I really like this library: it makes working with data simplifies how to access and work with myriads of datasets for an ML/AI project.
 
-
-
 ### Getting started with the datasets library
 
-Need: `https://huggingface.co/datasets/stanfordnlp/imdb`&#x20;
+<mark style="background-color:purple;">Need:</mark> <mark style="background-color:purple;"></mark><mark style="background-color:purple;">`https://huggingface.co/datasets/stanfordnlp/imdb`</mark>&#x20;
 
 Let's start our second Hugging Face project. In&#x20;
 
@@ -98,7 +104,7 @@ print(dataset)
 
 `load_dataset` will download the dataset to your local computer
 
-We have training and testing splits in our data - which are subsets of data we can use for training and testing. So lets look at them
+We have training and testing splits in our data - which are subsets of data we can use for training and testing. So let's look at them
 
 ```python
 train_dataset=dataset['train']
@@ -123,9 +129,9 @@ print(config.HF_DATASETS_CACHE)
 
 This will print the cache directory and we can go there. In our case we are using Google Colab so it shows:
 
-`/root/.cache/huggingface/datasets`
-
-Y_ou can use this to remove datasets that you do not need to free up some space later._
+```python
+/root/.cache/huggingface/datasets
+```
 
 Let's look at the structure of the train\_dataset.&#x20;
 
@@ -133,6 +139,8 @@ Let's look at the structure of the train\_dataset.&#x20;
 train_dataset.column_names
 train_dataset.features
 ```
+
+as you see we have two categories of the `label` that is negative coded as 0 and positive ones coded as 1.
 
 So when to use which of those attributes?&#x20;
 
@@ -151,7 +159,54 @@ dataset.features
 
 &#x20;This is because the dataset object itself can contain multiple splits, and each can have different structures. We will talk more about the dataset objects later.
 
+We can look at individual observations in the dataset to get a fill of data:
 
+```python
+train_dataset[0]
+```
+
+which returns the first observations, get a range of observations using
+
+```python
+train_dataset[range(20)]
+```
+
+what do you think we are going to get if we pull up `train_dataset[-1]`? Yes, the last observation.
+
+We can also use a column name to get a list of values in that column:
+
+<pre class="language-python"><code class="lang-python"><strong>train_dataset["text"]
+</strong></code></pre>
+
+If we need, we can rename columns using
+
+```python
+dataset_new = train_dataset.rename_column("text", "review")
+```
+
+Again, we cannot do this on the full dataset since it is a `DatasetDict` object.
+
+Lastly, let's have a look at filtering. We can do this using the `filter` method with a `lambda` function, such as&#x20;
+
+retrieve positive reviews or filtering reviews with a specific movie title (and looking at first 3 of them)
+
+<pre class="language-python"><code class="lang-python"># Filter positive reviews (label == 1) from the training dataset
+<strong>positive_reviews = train_dataset.filter(lambda x: x['label'] == 1)
+</strong>print(positive_reviews[:5])
+
+# Filter reviews containing a specific movie title (e.g., 'Inception')
+movie_title_reviews = train_dataset.filter(lambda x: 'inception' in x['text'].lower())
+print(movie_title_reviews[:3])  #
+</code></pre>
+
+Great! so now we know how to&#x20;
+
+* install the `dataset`library
+* load datasets from `HuggingFace`
+* start exploring our dataset
+* and do some basic transformations with it
+
+<mark style="color:purple;">**Let's move to the next video!**</mark>
 
 {% embed url="https://github.com/maria-pro/huggingFace/blob/main/test.ipynb" %}
 
