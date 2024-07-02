@@ -28,13 +28,13 @@ But let's start doing things!
 
 Hugging Face hub is build around four components:
 
-1\. Models
+<mark style="background-color:purple;">1. Models</mark>
 
-2\. Datasets
+<mark style="background-color:purple;">2. Datasets</mark>
 
-3\. Documentation - docs
+<mark style="background-color:purple;">3. Documentation - docs</mark>
 
-4\. Spaces and community
+<mark style="background-color:purple;">4. Spaces and community</mark>
 
 \
 Let's open the HF website - huggingface.co and explore all those components
@@ -45,111 +45,127 @@ Let's open the HF website - huggingface.co and explore all those components
 
 Let's start with models!&#x20;
 
-Hugging Face is the home for thousands of pre-trained models. They are freely available there and this is what makes it so valuable.
+The Hub has  a vast collection of pre-trained models, they have amazing subcollection for various NLP tasks such as text classification, named entity recognition, question answering, and more. Some of the most noteable models are&#x20;
 
-These models are capable to solve very different tasks from language processing to vision, audio and a multimodal which is a combination of different modalities, such as text and visual in a particular context! But don’t stress we will look at those and play with them!
+* BERT
+* GPT, GPT-2, GPT-3
+* RoBERTa
+* DistilBERT
+* T5
+* BART, and many others.
 
-\
+But there are models for many other tasks such as working with vision, audio and a multimodal models which is a combination of different modalities, such as text and visual in a particular context!&#x20;
 
+**Finding models**: On the homepage, click on the “Models” tab and search for some models, such as BERT or GPT-3.
 
-\- \*\*Exploring Models\*\*: On the homepage, click on the “Models” tab. Here, you can filter models by task (e.g., text classification, translation, summarization), libraries (e.g., Transformers, TensorFlow, PyTorch), and more. Each model card provides detailed information about the model, including its usage, performance metrics, and example code snippets.
+We can filter models by tasks such as&#x20;
 
-\
+* text classification
+* translation
+* summarization
 
+or libraries you use, such as&#x20;
 
-\- \*\*Using Models\*\*: One of the greatest advantages of Hugging Face is the ease of using these models. By copying the provided code snippet, you can integrate a model into your project with just a few lines of code.
+* Transformers (which we will talk about)
+* PyTorch (which we will also use!)
+* TensorFlow and more.&#x20;
 
-\
+You can get all the information about the model from its model card - its usage, performance metrics, and example code snippets.
 
+I absolutely love code snippets - it feels like cheating as we can copy those snippets and start using this model in. your project straight away, not writing a single line of code yourself!
 
-EXAMPLE
+Have a look at [BERT](https://huggingface.co/google-bert/bert-base-uncased) from Google. It is a very popular model as you see on its downloads count: Downloads last month 55,914,070
 
-\
+As you see in the description, this model is based on a this [paper](https://arxiv.org/abs/1810.04805) and is published originally in this [Github repository](https://github.com/google-research/bert).
 
+It also has model variations for different use cases (Model variations). It was trained on two datasets: wikipedia and book corpus, which are also available on Hugging Face.
 
-&#x20; This simplicity allows both beginners and experienced developers to quickly leverage state-of-the-art models.
+The code snippet makes it really easy to try this model with the `transformer` library, so let's try it in the Google Colab
 
-\
+And let's try this code snippet:
 
+```python
+from transformers import pipeline
+unmasker = pipeline('fill-mask', model='bert-base-uncased')
+unmasker("Hello I'm a [MASK] model.")
 
-\### Datasets
+```
 
-\
+and we can run our own
 
+```python
+from transformers import pipeline
+unmasker = pipeline('fill-mask', model='bert-base-uncased')
+unmasker("Dark chocolate is a [MASK] food.")
 
-Next, let's explore the Datasets section. Hugging Face provides access to a multitude of datasets that are crucial for training and evaluating machine learning models.
+```
 
-\
+#### Datasets
 
+Next, let's move to the Datasets section. Data is critical. No data no project.&#x20;
 
-\- \*\*Finding Datasets\*\*: Click on the “Datasets” tab. You can search for datasets based on tasks, languages, and other attributes. Each dataset comes with a detailed card that includes the dataset description, features, and usage examples.
+Hugging Face provides access to a multitude of datasets. Let's look at some.
 
-\
+**Finding Datasets**: Click on the “Datasets” tab. You can search for datasets based on tasks, their size, and other attributes.&#x20;
 
+Similar to models, each dataset comes with a detailed card that includes:
 
-\- \*\*Using Datasets\*\*: Hugging Face offers the \`datasets\` library, which allows seamless integration of datasets into your workflow. For instance, to load and use a dataset, you can do:
+* the dataset description
+* features, and&#x20;
+* usage examples.
 
-&#x20; \`\`\`python
+For example, lets look at `rotten_tomatoes` dataset [here](https://huggingface.co/datasets/cornell-movie-review-data/rotten\_tomatoes)
 
-&#x20; from datasets import load\_dataset
+We can see that this is a movie review dataset where reviews are labeled as positive or negative. We have 5,331 positive and 5,331 negative ones.
 
-&#x20; dataset = load\_dataset('imdb')
+We can see the example of usage under `Use this dataset` tab and we can select the `datasets` library as this is exactly what we are going to use later. We just copy this code and use it in our Google Colab
 
-&#x20; print(dataset\['train']\[0])
+```python
+from datasets import load_dataset
+ds = load_dataset("cornell-movie-review-data/rotten_tomatoes")
+```
 
-&#x20; \`\`\`
+#### Documentation
 
-&#x20; This library supports various functionalities like dataset manipulation, filtering, and even sharing your own datasets with the community.
+Our next stop is Docs or documentation. I absolutely love the way Hugging Face organised this section as you can see some `Quick start` tutorials as well as in-depth documentation there.&#x20;
 
-\
+We will work closely with this section throughout this course. So it is a good idea to bookmark it!
 
+#### Spaces and Community
 
-\### Documentation
+It is one of the most exciting aspects of Hugging Face - its community and collaboration!
 
-\
+**Community Involvement**: The Hugging Face community is vibrant and active.&#x20;
 
+You can find the under the `Community` link.
 
-The documentation provided by Hugging Face is comprehensive and user-friendly. It serves as a valuable resource whether you are just getting started or need advanced guidance.
+You can join the discussion forums, contribute to projects, and participate in events like sprints and hackathons. The community is a great place to learn, share knowledge, and collaborate with others passionate about AI.
 
-\
+and <mark style="color:purple;">finally!</mark>
 
+**Spaces**: Spaces is a relatively new feature that allows users to create and share interactive demos. It allows to deploy models and datasets in an interactive format that can be accessed and used by others. You can create your own Space to showcase your models or explore Spaces created by others for inspiration.
 
-\- \*\*Accessing Docs\*\*: Click on the “Docs” tab. Here, you can find detailed documentation for the various libraries offered by Hugging Face, such as \`transformers\`, \`datasets\`, \`tokenizers\`, and \`accelerate\`.
+For example, let's have a look at this space that showcases [Stable Diffusion 3 Medium](https://huggingface.co/stabilityai/stable-diffusion-3-medium) model
 
-\
+and this prompt
 
+> hot chocolate in a cosy winter morning
 
-\- \*\*Guides and Tutorials\*\*: The documentation includes step-by-step guides, tutorials, and example notebooks that cover a wide range of topics. Whether you want to fine-tune a model or learn about advanced tokenization techniques, the docs have you covered.
+Have a look at the great image it generates!&#x20;
 
-\
+<figure><img src="../.gitbook/assets/stable diffusion.png" alt="" width="375"><figcaption></figcaption></figure>
 
+That was a good look! We covered models, datasets, and community and had a play with spaces! In the next video we will look very closely on how we can make models to work for our project! &#x20;
 
-\### Spaces and Community
+<mark style="color:purple;">But before - in suggest that you spend some time on Hugging Face and look for models and datasets that are of interest to your personally.</mark>&#x20;
 
-\
+<mark style="color:green;">This is HOW I LEARNT myself and it worked perfectly for me!</mark>&#x20;
 
+<mark style="color:purple;">Nothing works better than DOING things, so start exploring!</mark>
 
-One of the most exciting aspects of Hugging Face is its community and collaborative spaces.
+***
 
-\
-
-
-\- \*\*Spaces\*\*: Spaces is a relatively new feature that allows users to create and share interactive machine learning demos. Powered by Gradio and Streamlit, Spaces enable you to deploy models and datasets in an interactive format that can be accessed and used by others. You can create your own Space to showcase your models or explore Spaces created by others for inspiration.
-
-\
-
-
-\- \*\*Community Involvement\*\*: The Hugging Face community is vibrant and active. You can join the discussion forums, contribute to projects, and participate in events like sprints and hackathons. The community is a great place to learn, share knowledge, and collaborate with others passionate about AI.
-
-\
-
-
-\### Getting Hands-On
-
-\
-
-
-Now that we have an overview, it's time to get hands-on. Here are some practical exercises to get you started:
+Here are some practical exercises to get you started:
 
 \
 
@@ -171,13 +187,9 @@ Now that we have an overview, it's time to get hands-on. Here are some practical
 
 4\. \*\*Read the Docs\*\*: Pick a guide or tutorial from the documentation and follow along. Implement the examples and try extending them with your own modifications.
 
-\
 
 
 Finally!
-
-\
-
 
 Hugging Face is a treasure trove of AI resources, and by exploring its models, datasets, documentation, and community features, you can significantly boost your machine learning projects. Dive in, experiment, and don't hesitate to reach out to the community for support. Happy exploring!
 
