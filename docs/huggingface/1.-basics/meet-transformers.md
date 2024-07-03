@@ -1,4 +1,10 @@
+---
+description: This part is on `transformers` library
+---
+
 # Meet Transformers!
+
+#### Module 1.4. Transformers
 
 | What are transformers?                                                          |
 | ------------------------------------------------------------------------------- |
@@ -25,3 +31,13 @@
 | Simple demo                                                                     |
 | Transformer models in practice                                                  |
 | Conclusion                                                                      |
+
+
+
+
+
+What are transformers?
+
+Why transformers? and what was before them
+
+Attention is all you need! where it all started

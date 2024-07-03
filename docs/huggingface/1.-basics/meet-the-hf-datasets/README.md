@@ -4,7 +4,7 @@
 
 <summary>Content</summary>
 
-[outline-schedule.md](outline-schedule.md "mention")
+[outline-schedule.md](../outline-schedule.md "mention")
 
 </details>
 
@@ -25,51 +25,7 @@
 | Streaming datasets                              |
 | Questions to ask before starting with a dataset |
 
-### Sneak peak at datasets
-
-
-
-{% hint style="info" %}
-<mark style="color:purple;">What we will cover:</mark>
-
-* <mark style="color:purple;">where are datasets at Hugging face</mark>
-* <mark style="color:purple;">what is the data workflow</mark>&#x20;
-* <mark style="color:purple;">what to use for data workflow with Hugging Face</mark>
-{% endhint %}
-
-***
-
-> #### Problem 1
->
-> **I need data. Can to get my data in Hugging Face?**&#x20;
->
-> Data is the start of it all: it defines everything you do in your project. Hugging Face is amazing place as has lot of datasets that we can use to jump start building great things AI.
-
-
-
-> #### Problem 2
->
-> **I found my data, but how can I work with it using Hugging Face tools?**
->
-> What you most commonly want to do with the data is to load it, explore and prep (or transform) your data for further use = put it in the model!&#x20;
->
->
-
-***
-
-To summarise:
-
-<figure><img src="../.gitbook/assets/data_workflow.png" alt="" width="375"><figcaption><p>Data workflow</p></figcaption></figure>
-
-Let's have a closer look at datasets at Hugging Face and see how we can use data workflow with the `datasets` library.
-
-We can find datasets at this special Datasets section at Hugging Face [here](https://www.google.com/url?q=https%3A%2F%2Fhuggingface.co%2Fdatasets) and we also have support for our data workflow in the datasets library . So you see we have both - data repos and tools to work with data.
-
-<figure><img src="../.gitbook/assets/data_tools.png" alt="" width="375"><figcaption><p>Hugging Face repos and library</p></figcaption></figure>
-
-When I am not sure how to do something related to data at Hugging Face, I always go and check docs [here](https://huggingface.co/docs/datasets/index)
-
-I really like this library: it makes working with data simplifies how to access and work with myriads of datasets for an ML/AI project.
+###
 
 ### Getting started with the datasets library
 
