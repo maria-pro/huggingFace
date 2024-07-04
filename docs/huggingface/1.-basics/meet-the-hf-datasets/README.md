@@ -4,7 +4,7 @@
 
 <summary>Content</summary>
 
-[outline-schedule.md](../outline-schedule.md "mention")
+[outline-schedule.md](../../outline-schedule.md "mention")
 
 </details>
 
